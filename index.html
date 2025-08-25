@@ -9,6 +9,20 @@
 <body>
     <div class="container">
         <h1>Крестики-нолики</h1>
+        <div class="game-mode">
+            <div class="mode-selector">
+                <button class="mode-btn active" onclick="setGameMode('pvp')">Игрок vs Игрок</button>
+                <button class="mode-btn" onclick="setGameMode('ai')">Игрок vs AI</button>
+            </div>
+            <div class="difficulty-selector" id="difficultySelector" style="display: none;">
+                <label>Сложность AI:</label>
+                <select id="aiDifficulty" onchange="setAIDifficulty()">
+                    <option value="easy">Легкий</option>
+                    <option value="medium">Средний</option>
+                    <option value="hard">Сложный</option>
+                </select>
+            </div>
+        </div>
         <div class="game-info">
             <div class="status">Ход игрока: X</div>
             <button class="restart-btn" onclick="restartGame()">Новая игра</button>
